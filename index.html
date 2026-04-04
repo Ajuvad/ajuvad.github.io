@@ -1,169 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Ajuvad Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: white;
-  scroll-behavior: smooth;
+    body {
+      background: url("https://images.unsplash.com/photo-1503264116251-35a269479413") no-repeat center center/cover;
+      color: white;
+      scroll-behavior: smooth;
+    }
 
-  /* BACKGROUND IMAGE (same for all sections) */
-  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center fixed;
-  background-size: cover;
-}
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px;
+      background: rgba(0,0,0,0.6);
+      z-index: 1000;
+    }
 
-/* NAVBAR */
-.navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.4);
-}
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
 
-/* NAV LINKS */
-.navbar a {
-  transition: 0.3s;
-}
-.navbar a:hover {
-  color: #38bdf8 !important;
-}
+    .navbar a:hover {
+      color: #00ffff;
+    }
 
-/* HERO SECTION */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-left: 80px;
-}
+    section {
+      min-height: 100vh;
+      padding: 100px 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-/* SECTIONS */
-.section {
-  padding: 100px 20px;
-  background: rgba(0,0,0,0.7);
-}
+    .box {
+      background: rgba(0,0,0,0.6);
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
 
-/* BUTTON STYLE */
-.btn-custom {
-  border: 2px solid #38bdf8;
-  padding: 10px 25px;
-  border-radius: 10px;
-  color: #38bdf8;
-  text-decoration: none;
-  margin-right: 15px;
-}
-.btn-custom:hover {
-  background: #38bdf8;
-  color: black;
-}
+    h1, h2 {
+      margin-bottom: 20px;
+    }
 
-/* ACTIVE MENU */
-.navbar a.active {
-  color: #38bdf8 !important;
-  font-weight: bold;
-}
-</style>
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
 
+    /* Contact */
+    .contact-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .contact-info, .contact-form {
+      flex: 1;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #00ffff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #00cccc;
+    }
+
+  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR (RIGHT SIDE ONLY) -->
-<nav class="navbar navbar-dark">
-  <div class="container d-flex justify-content-end">
-
-    <div>
-      <a class="text-white me-3" href="#home">Home</a>
-      <a class="text-white me-3" href="#about">About</a>
-      <a class="text-white me-3" href="#projects">Projects</a>
-      <a class="text-white me-3" href="#portfolio">Portfolio</a>
-      <a class="text-white" href="#contact">Contact</a>
-    </div>
-
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
   </div>
-</nav>
 
-<!-- HOME -->
-<div id="home" class="hero">
-  <div style="max-width: 700px;">
-
-    <h1 style="font-size:60px; font-weight:bold;">
-      Hi I'm <br>
-      <span style="font-size:70px;">Arjun</span>
-    </h1>
-
-    <h2 style="color:#38bdf8; font-weight:bold;">
-      Marketing & Sales Professional
-    </h2>
-
-    <p style="margin-top:20px; line-height:1.6;">
-      A passionate professional with 3 years experience in education consulting,
-      marketing, and sales. I help businesses grow and build strong digital presence.
-    </p>
-
-    <div style="margin-top:30px;">
-      <a href="#" class="btn-custom">Follow Me</a>
-      <a href="#contact" class="btn-custom">Let's Chat</a>
+  <!-- Home -->
+  <section id="home">
+    <div class="box">
+      <h1>Hi I'm Ajuvad</h1>
+      <h2>Marketing & Sales Professional</h2>
+      <p>
+        A passionate marketing and sales professional who drives business growth through strategic planning and strong client relationships. With 3+ years of experience, I specialize in understanding customer needs, increasing conversions, and building brand value.
+      </p>
     </div>
+  </section>
 
-  </div>
-</div>
+  <!-- About -->
+  <section id="about">
+    <div class="box">
+      <h2>About</h2>
+      <p>
+        I am a B-Tech student specializing in Artificial Intelligence and Machine Learning. Along with my technical background, I have 3+ years of experience in marketing and sales, where I developed strong communication, negotiation, and client-handling skills.
+      </p>
+    </div>
+  </section>
 
-<!-- ABOUT -->
-<div id="about" class="section container">
-  <h2>About</h2>
-  <p>I am a BTech AI & ML student with strong experience in marketing, sales, and consulting.</p>
-</div>
+  <!-- Projects -->
+  <section id="projects">
+    <div class="box">
+      <h2>Projects</h2>
 
-<!-- PROJECTS -->
-<div id="projects" class="section container">
-  <h2>Projects</h2>
-  <p>Your projects here</p>
-</div>
+      <p><b>AI-Based Assistance System for Visually Impaired</b><br>
+      Developed an AI-powered system using Python, OpenCV, and YOLO to help visually impaired individuals navigate safely with real-time audio feedback.</p>
 
-<!-- PORTFOLIO -->
-<div id="portfolio" class="section container">
-  <h2>Portfolio</h2>
-  <p>Your work showcase here</p>
-</div>
+      <p><b>Synapse Protocol – Adaptive AI Combat System</b><br>
+      Developed an adaptive AI system using reinforcement learning and multi-agent coordination for intelligent and dynamic gameplay.</p>
 
-<!-- CONTACT -->
-<div id="contact" class="section container">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-</div>
+    </div>
+  </section>
 
-<!-- ACTIVE NAV SCRIPT -->
-<script>
-const sections = document.querySelectorAll("div[id]");
-const navLinks = document.querySelectorAll(".navbar a");
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="box">
+      <h2>Portfolio</h2>
 
-window.addEventListener("scroll", () => {
-  let current = "";
+      <p>
+        I am a B-Tech student specializing in Artificial Intelligence and Machine Learning at the College of Engineering Attingal (CEAL), affiliated with APJ Abdul Kalam Technological University. I have a strong foundation in developing AI-driven solutions, particularly in areas such as computer vision and adaptive systems.
+      </p>
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 100) {
-      current = section.getAttribute("id");
-    }
-  });
+      <p>
+        In addition to my technical expertise, I bring over 3 years of professional experience as an Educational Consultant, where I gained hands-on exposure to marketing, sales, and client relationship management.
+      </p>
 
-  navLinks.forEach(a => {
-    a.classList.remove("active");
-    if (a.getAttribute("href") === "#" + current) {
-      a.classList.add("active");
-    }
-  });
-});
-</script>
+      <p>
+        I offer a balanced skill set that combines technical knowledge with business insight. I am currently seeking opportunities in marketing, sales, and business development roles.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="box">
+      <h2>Contact Me</h2>
+
+      <div class="contact-container">
+
+        <div class="contact-info">
+          <p>📧 ajuvad123avm@gmail.com</p>
+          <p>📞 +91 8848675359</p>
+          <p>📍 Kerala, India</p>
+          <p>📸 instagram.com/ajuvad_aju</p>
+        </div>
+
+        <div class="contact-form">
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your Email">
+          <textarea rows="5" placeholder="Your Message"></textarea>
+          <button>Send Message</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
