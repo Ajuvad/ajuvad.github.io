@@ -1,46 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: 'Segoe UI', sans-serif;
   color: white;
+  scroll-behavior: smooth;
+
+  /* KEEP YOUR BACKGROUND IMAGE */
   background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center fixed;
   background-size: cover;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.4);
 }
 
-/* Sections */
+/* NAV LINKS */
+.navbar a {
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: #38bdf8 !important;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+/* SECTIONS */
 .section {
   padding: 100px 20px;
   background: rgba(0,0,0,0.7);
 }
 
-/* Hero */
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* BUTTON STYLE */
+.btn-custom {
+  border: 2px solid #38bdf8;
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: #38bdf8;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.btn-custom:hover {
+  background: #38bdf8;
+  color: black;
 }
 
-/* Cards */
-.card {
-  background: #1e293b;
-  border: none;
+/* ACTIVE MENU */
+.navbar a.active {
+  color: #38bdf8 !important;
+  font-weight: bold;
 }
 </style>
 
@@ -48,36 +76,94 @@ body {
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="#">My Portfolio</a>
+
     <div>
-      <a href="#home" class="text-white me-3">Home</a>
-      <a href="#about" class="text-white me-3">About</a>
-      <a href="#projects" class="text-white me-3">Projects</a>
-      <a href="#contact" class="text-white">Contact</a>
+      <a class="text-white me-3" href="#home">Home</a>
+      <a class="text-white me-3" href="#about">About</a>
+      <a class="text-white me-3" href="#projects">Projects</a>
+      <a class="text-white me-3" href="#portfolio">Portfolio</a>
+      <a class="text-white" href="#contact">Contact</a>
     </div>
   </div>
 </nav>
 
+<!-- HOME (LIKE SECOND IMAGE) -->
 <div id="home" class="hero">
-  <h1>Welcome</h1>
+  <div style="max-width: 700px;">
+
+    <h1 style="font-size:60px; font-weight:bold;">
+      Hi I'm <br>
+      <span style="font-size:70px;">Your Name</span>
+    </h1>
+
+    <h2 style="color:#38bdf8; font-weight:bold;">
+      Frontend Developer
+    </h2>
+
+    <p style="margin-top:20px; line-height:1.6;">
+      A passionate professional with experience in marketing, sales, and consulting.
+      I create impactful digital experiences and help businesses grow.
+    </p>
+
+    <div style="margin-top:30px;">
+      <a href="#" class="btn-custom">Follow Me</a>
+      <a href="#contact" class="btn-custom">Let's Chat</a>
+    </div>
+
+  </div>
 </div>
 
+<!-- ABOUT -->
 <div id="about" class="section container">
   <h2>About</h2>
-  <p>Your details here</p>
+  <p>I am a BTech AI & ML student with 3 years experience as an Educational Consultant. Skilled in marketing, sales, and communication.</p>
 </div>
 
+<!-- PROJECTS -->
 <div id="projects" class="section container">
   <h2>Projects</h2>
   <p>Your work here</p>
 </div>
 
+<!-- PORTFOLIO -->
+<div id="portfolio" class="section container">
+  <h2>Portfolio</h2>
+  <p>Add your images here</p>
+</div>
+
+<!-- CONTACT -->
 <div id="contact" class="section container">
   <h2>Contact</h2>
-  <p>Email here</p>
+  <p>Email: your@email.com</p>
 </div>
+
+<!-- ACTIVE NAV SCRIPT -->
+<script>
+const sections = document.querySelectorAll("div[id]");
+const navLinks = document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 100) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(a => {
+    a.classList.remove("active");
+    if (a.getAttribute("href") === "#" + current) {
+      a.classList.add("active");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
