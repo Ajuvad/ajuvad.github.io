@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+<title>Portfolio</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -14,7 +14,7 @@ body {
   color: white;
   scroll-behavior: smooth;
 
-  /* KEEP YOUR BACKGROUND IMAGE */
+  /* BACKGROUND IMAGE (same for all sections) */
   background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center fixed;
   background-size: cover;
 }
@@ -76,10 +76,9 @@ body {
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVBAR (RIGHT SIDE ONLY) -->
 <nav class="navbar navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">My Portfolio</a>
+  <div class="container d-flex justify-content-end">
 
     <div>
       <a class="text-white me-3" href="#home">Home</a>
@@ -88,25 +87,26 @@ body {
       <a class="text-white me-3" href="#portfolio">Portfolio</a>
       <a class="text-white" href="#contact">Contact</a>
     </div>
+
   </div>
 </nav>
 
-<!-- HOME (LIKE SECOND IMAGE) -->
+<!-- HOME -->
 <div id="home" class="hero">
   <div style="max-width: 700px;">
 
     <h1 style="font-size:60px; font-weight:bold;">
       Hi I'm <br>
-      <span style="font-size:70px;">Your Name</span>
+      <span style="font-size:70px;">Arjun</span>
     </h1>
 
     <h2 style="color:#38bdf8; font-weight:bold;">
-      Frontend Developer
+      Marketing & Sales Professional
     </h2>
 
     <p style="margin-top:20px; line-height:1.6;">
-      A passionate professional with experience in marketing, sales, and consulting.
-      I create impactful digital experiences and help businesses grow.
+      A passionate professional with 3 years experience in education consulting,
+      marketing, and sales. I help businesses grow and build strong digital presence.
     </p>
 
     <div style="margin-top:30px;">
@@ -120,19 +120,19 @@ body {
 <!-- ABOUT -->
 <div id="about" class="section container">
   <h2>About</h2>
-  <p>I am a BTech AI & ML student with 3 years experience as an Educational Consultant. Skilled in marketing, sales, and communication.</p>
+  <p>I am a BTech AI & ML student with strong experience in marketing, sales, and consulting.</p>
 </div>
 
 <!-- PROJECTS -->
 <div id="projects" class="section container">
   <h2>Projects</h2>
-  <p>Your work here</p>
+  <p>Your projects here</p>
 </div>
 
 <!-- PORTFOLIO -->
 <div id="portfolio" class="section container">
   <h2>Portfolio</h2>
-  <p>Add your images here</p>
+  <p>Your work showcase here</p>
 </div>
 
 <!-- CONTACT -->
