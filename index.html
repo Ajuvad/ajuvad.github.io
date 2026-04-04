@@ -1,198 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Ajuvad Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajuvad | Home</title>
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  color:white;
+  background: url("https://images.unsplash.com/photo-1503264116251-35a269479413") no-repeat center center fixed;
+  background-size: cover;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+.navbar {
+  text-align:center;
+  padding:20px;
+  background: rgba(0,0,0,0.7);
+}
 
-    body {
-      background: url("https://images.unsplash.com/photo-1503264116251-35a269479413") no-repeat center center/cover;
-      color: white;
-      scroll-behavior: smooth;
-    }
+.navbar a {
+  color:white;
+  margin:15px;
+  text-decoration:none;
+  font-size:18px;
+}
+.navbar a:hover { color: cyan; }
 
-    /* Navbar */
-    .navbar {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 15px;
-      background: rgba(0,0,0,0.6);
-      z-index: 1000;
-    }
+.top-section {
+  margin-top:120px;
+  text-align:center;
+}
 
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      transition: 0.3s;
-    }
+.top-section h1 {
+  font-size:48px;
+  margin-bottom:10px;
+}
 
-    .navbar a:hover {
-      color: #00ffff;
-    }
+.top-section h2 {
+  font-size:24px;
+  font-weight:normal;
+  margin-bottom:25px;
+}
 
-    section {
-      min-height: 100vh;
-      padding: 100px 10%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.button {
+  display:inline-block;
+  margin:10px;
+  padding:12px 25px;
+  background: cyan;
+  color:black;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+}
+.button:hover { background:white; }
 
-    .box {
-      background: rgba(0,0,0,0.6);
-      padding: 40px;
-      border-radius: 15px;
-      max-width: 900px;
-      width: 100%;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    }
-
-    h1, h2 {
-      margin-bottom: 20px;
-    }
-
-    p {
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-
-    /* Contact */
-    .contact-container {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .contact-info, .contact-form {
-      flex: 1;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 5px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background: #00ffff;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background: #00cccc;
-    }
-
-  </style>
+.about-box {
+  width:65%;
+  margin:50px auto;
+  background: rgba(0,0,0,0.6);
+  padding:35px;
+  border-radius:10px;
+  line-height:1.6;
+  text-align:justify;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </div>
+<div class="navbar">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="contact.html">Contact</a>
+</div>
 
-  <!-- Home -->
-  <section id="home">
-    <div class="box">
-      <h1>Hi I'm Ajuvad</h1>
-      <h2>Marketing & Sales Professional</h2>
-      <p>
-        A passionate marketing and sales professional who drives business growth through strategic planning and strong client relationships. With 3+ years of experience, I specialize in understanding customer needs, increasing conversions, and building brand value.
-      </p>
-    </div>
-  </section>
+<!-- Top Section -->
+<div class="top-section">
+<h1>Hi, I'm Ajuvad</h1>
+<h2>Marketing & Sales Professional | AI & ML Enthusiast</h2>
+<a href="https://instagram.com/ajuvad_aju" target="_blank" class="button">Follow Me</a>
+<a href="contact.html" class="button">Let’s Chat</a>
+</div>
 
-  <!-- About -->
-  <section id="about">
-    <div class="box">
-      <h2>About</h2>
-      <p>
-        I am a B-Tech student specializing in Artificial Intelligence and Machine Learning. Along with my technical background, I have 3+ years of experience in marketing and sales, where I developed strong communication, negotiation, and client-handling skills.
-      </p>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <div class="box">
-      <h2>Projects</h2>
-
-      <p><b>AI-Based Assistance System for Visually Impaired</b><br>
-      Developed an AI-powered system using Python, OpenCV, and YOLO to help visually impaired individuals navigate safely with real-time audio feedback.</p>
-
-      <p><b>Synapse Protocol – Adaptive AI Combat System</b><br>
-      Developed an adaptive AI system using reinforcement learning and multi-agent coordination for intelligent and dynamic gameplay.</p>
-
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio">
-    <div class="box">
-      <h2>Portfolio</h2>
-
-      <p>
-        I am a B-Tech student specializing in Artificial Intelligence and Machine Learning at the College of Engineering Attingal (CEAL), affiliated with APJ Abdul Kalam Technological University. I have a strong foundation in developing AI-driven solutions, particularly in areas such as computer vision and adaptive systems.
-      </p>
-
-      <p>
-        In addition to my technical expertise, I bring over 3 years of professional experience as an Educational Consultant, where I gained hands-on exposure to marketing, sales, and client relationship management.
-      </p>
-
-      <p>
-        I offer a balanced skill set that combines technical knowledge with business insight. I am currently seeking opportunities in marketing, sales, and business development roles.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="box">
-      <h2>Contact Me</h2>
-
-      <div class="contact-container">
-
-        <div class="contact-info">
-          <p>📧 ajuvad123avm@gmail.com</p>
-          <p>📞 +91 8848675359</p>
-          <p>📍 Kerala, India</p>
-          <p>📸 instagram.com/ajuvad_aju</p>
-        </div>
-
-        <div class="contact-form">
-          <input type="text" placeholder="Your Name">
-          <input type="email" placeholder="Your Email">
-          <textarea rows="5" placeholder="Your Message"></textarea>
-          <button>Send Message</button>
-        </div>
-
-      </div>
-    </div>
-  </section>
+<!-- About Summary on Home Page -->
+<div class="about-box">
+<h2>About Me</h2>
+<p>
+I am a BTech student specializing in Artificial Intelligence and Machine Learning, with a strong foundation in marketing, sales, and business development. Over the past 3 years, I have worked as an Educational Consultant, helping students make informed career decisions while also contributing to organizational growth.
+</p>
+<p>
+I have developed strong communication, negotiation, and client-handling skills. I am highly adaptable, goal-oriented, and passionate about achieving results in competitive environments. I am currently seeking opportunities in marketing, sales, and business development roles.
+</p>
+</div>
 
 </body>
 </html>
