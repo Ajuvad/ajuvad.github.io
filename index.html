@@ -2,34 +2,67 @@
 <html>
 <head>
 <title>Ajuvad</title>
+
 <style>
 body {
   margin:0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   color:white;
+
   background: url("https://images.unsplash.com/photo-1492724441997-5dc865305da7") no-repeat center center fixed;
   background-size: cover;
 }
+
+/* DARK OVERLAY */
+body::before {
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.65);
+  z-index:-1;
+}
+
+/* NAVBAR */
 .navbar {
   text-align:center;
   padding:20px;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.8);
+  position: sticky;
+  top:0;
+  backdrop-filter: blur(10px);
 }
+
 .navbar a {
   color:white;
   margin:15px;
   text-decoration:none;
   font-size:18px;
+  transition:0.3s;
 }
-.navbar a:hover { color: cyan; }
+
+.navbar a:hover {
+  color:cyan;
+  text-shadow:0 0 10px cyan;
+}
+
+/* BOX */
 .box {
   margin:120px auto;
   width:60%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(255,255,255,0.05);
   padding:40px;
-  border-radius:10px;
+  border-radius:12px;
   line-height:1.6;
+  backdrop-filter: blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:0 0 30px rgba(0,0,0,0.5);
+  text-align:center;
 }
+
+/* BUTTON */
 .button {
   display:inline-block;
   margin:15px 10px 0 10px;
@@ -39,10 +72,28 @@ body {
   text-decoration:none;
   border-radius:8px;
   font-weight:bold;
+  transition:0.3s;
 }
-.button:hover { background: white; }
+
+.button:hover {
+  background:white;
+  transform:scale(1.05);
+}
+
+/* TEXT */
+h1 {
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+h2 {
+  color:#ccc;
+  font-weight:normal;
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="navbar">
@@ -56,6 +107,7 @@ body {
 <div class="box">
 <h1>Hi, I'm Ajuvad</h1>
 <h2>Marketing & Sales Professional | AI Enthusiast</h2>
+
 <p>
 A passionate professional driving business growth through strategy, client relations, and AI-driven problem solving. Over 3 years of experience in marketing, sales, and educational consulting.
 </p>
