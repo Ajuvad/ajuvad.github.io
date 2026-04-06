@@ -3,22 +3,39 @@
 <head>
 <title>Contact</title>
 
-<!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body {
   margin:0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   color:white;
+
   background: url("https://images.unsplash.com/photo-1492724441997-5dc865305da7") no-repeat center center fixed;
   background-size: cover;
 }
 
+/* DARK OVERLAY */
+body::before {
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.65);
+  z-index:-1;
+}
+
+/* NAVBAR */
 .navbar {
   text-align:center;
   padding:20px;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.8);
+  position: sticky;
+  top:0;
+  backdrop-filter: blur(10px);
 }
 
 .navbar a {
@@ -26,42 +43,64 @@ body {
   margin:15px;
   text-decoration:none;
   font-size:18px;
-}
-.navbar a:hover { color: cyan; }
-
-.container {
-  text-align:center;
-  margin-top:150px;
-  font-size:20px;
+  transition:0.3s;
 }
 
-.container p {
-  margin:12px 0;
-}
-
-.container a {
+.navbar a:hover {
   color:cyan;
-  text-decoration:none;
-}
-.container a:hover {
-  text-decoration:underline;
+  text-shadow:0 0 10px cyan;
 }
 
+/* CONTACT BOX */
+.box {
+  margin:120px auto;
+  width:60%;
+  text-align:center;
+  background: rgba(255,255,255,0.05);
+  padding:40px;
+  border-radius:12px;
+  backdrop-filter: blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+/* TEXT */
+h2 {
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+p {
+  font-size:18px;
+  margin:12px 0;
+  color:#ddd;
+}
+
+/* HIGHLIGHT TEXT */
+.highlight {
+  color:white;
+  font-weight:bold;
+}
+
+/* ICONS */
 .icons {
-  margin-top:40px;
+  margin-top:30px;
 }
 
 .icons a {
   color:white;
-  font-size:30px;
+  font-size:28px;
   margin:0 15px;
   transition:0.3s;
 }
+
 .icons a:hover {
-  color: cyan;
+  color:cyan;
+  transform:scale(1.2);
 }
 </style>
 </head>
+
 <body>
 
 <div class="navbar">
@@ -72,21 +111,20 @@ body {
 <a href="contact.html">Contact</a>
 </div>
 
-<div class="container">
+<div class="box">
 <h2>Contact</h2>
 
-<!-- Mail as first text -->
-<p>Mail: <span style="color:#111; font-weight:bold;">ajuvad123avm@gmail.com</span></p>
-<p>📞 <span style="color:#111; font-weight:bold;">+91 8848675359</span></p>
+<p>📧 <span class="highlight">ajuvad123avm@gmail.com</span></p>
+<p>📞 <span class="highlight">+91 8848675359</span></p>
 
-<!-- Icons at bottom, including Mail -->
 <div class="icons">
   <a href="mailto:ajuvad123avm@gmail.com" title="Mail"><i class="fas fa-envelope"></i></a>
   <a href="https://instagram.com/aju_vad_aju" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
   <a href="https://linkedin.com/in/ajuvad" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-  <a href="https://github.com/Ajuvad/Ajuvad" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+  <a href="https://github.com/Ajuvad" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
 </div>
 
 </div>
+
 </body>
 </html>
