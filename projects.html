@@ -2,16 +2,96 @@
 <html>
 <head>
 <title>Projects</title>
+
 <style>
-body {margin:0;font-family:Arial;color:white;
-background: url("https://images.unsplash.com/photo-1492724441997-5dc865305da7") no-repeat center center fixed;
-background-size:cover;}
-.navbar{text-align:center;padding:20px;background:rgba(0,0,0,0.7);}
-.navbar a{color:white;margin:15px;text-decoration:none;font-size:18px;}
-.navbar a:hover{color:cyan;}
-.box{margin:120px auto;width:60%;background:rgba(0,0,0,0.6);padding:40px;border-radius:10px;}
+body {
+  margin:0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color:white;
+
+  background: url("https://images.unsplash.com/photo-1492724441997-5dc865305da7") no-repeat center center fixed;
+  background-size:cover;
+}
+
+/* DARK OVERLAY */
+body::before {
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.65);
+  z-index:-1;
+}
+
+/* NAVBAR */
+.navbar {
+  text-align:center;
+  padding:20px;
+  background: rgba(0,0,0,0.8);
+  position: sticky;
+  top:0;
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  color:white;
+  margin:15px;
+  text-decoration:none;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.navbar a:hover {
+  color:cyan;
+  text-shadow:0 0 10px cyan;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width:80%;
+  margin:100px auto;
+}
+
+/* TITLE */
+h2 {
+  text-align:center;
+  font-size:32px;
+  margin-bottom:40px;
+}
+
+/* PROJECT CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:12px;
+  margin-bottom:30px;
+  backdrop-filter: blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow:0 0 30px rgba(0,0,0,0.8);
+}
+
+/* TEXT */
+h3 {
+  color:cyan;
+  margin-bottom:10px;
+}
+
+p {
+  color:#ddd;
+  line-height:1.7;
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="navbar">
@@ -22,19 +102,24 @@ background-size:cover;}
 <a href="contact.html">Contact</a>
 </div>
 
-<div class="box">
+<div class="container">
 <h2>Projects</h2>
 
+<div class="card">
 <h3>AI-Based Assistance System for Visually Impaired</h3>
 <p>
 Developed an AI-powered system to assist visually impaired individuals in navigating their surroundings safely. The system uses real-time camera input and deep learning to detect obstacles and understand the environment, then provides instant audio feedback to guide the user. Built using Python, OpenCV, and YOLO, the model was trained on a custom dataset (Roboflow) to improve detection accuracy. The solution offers a hands-free, user-friendly approach to enhance independence and safety in both indoor and outdoor environments.
 </p>
+</div>
 
+<div class="card">
 <h3>Synapse Protocol – Adaptive AI Combat System</h3>
 <p>
 Developed an adaptive AI combat system that replaces traditional scripted game AI with intelligent agents capable of learning from player behavior. The system uses Multi-Agent Reinforcement Learning (MAPPO) to enable real-time adaptation, allowing enemies to adjust their strategies based on how the player plays. GOAP (Goal-Oriented Action Planning) is used for high-level strategies like flanking and ambush, while Graph Neural Networks (GNN) enable coordination between multiple AI agents for team-based actions. A player behavior analysis module further enhances adaptability. This project demonstrates the ability to design and integrate learning, planning, and multi-agent communication into a unified AI system, resulting in more realistic, dynamic, and engaging gameplay.
 </p>
+</div>
 
 </div>
+
 </body>
 </html>
