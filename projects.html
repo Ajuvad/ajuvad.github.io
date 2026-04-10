@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Projects</title>
+<meta charset="UTF-8">
+<title>Projects | Ajuvad</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
   margin:0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  color:white;
+  padding:0;
+  box-sizing:border-box;
+}
 
+body {
+  font-family: 'Poppins', sans-serif;
+  color:white;
   background: url("https://images.unsplash.com/photo-1492724441997-5dc865305da7") no-repeat center center fixed;
   background-size:cover;
 }
@@ -17,83 +24,111 @@ body {
 body::before {
   content:"";
   position:fixed;
-  top:0;
-  left:0;
   width:100%;
   height:100%;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0,0,0,0.75);
   z-index:-1;
 }
 
 /* NAVBAR */
 .navbar {
-  text-align:center;
+  display:flex;
+  justify-content:center;
+  gap:40px;
   padding:20px;
-  background: rgba(0,0,0,0.8);
-  position: sticky;
-  top:0;
-  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(12px);
 }
 
 .navbar a {
   color:white;
-  margin:15px;
   text-decoration:none;
-  font-size:18px;
-  transition:0.3s;
+  font-weight:500;
 }
 
 .navbar a:hover {
-  color:cyan;
-  text-shadow:0 0 10px cyan;
+  color:#38bdf8;
 }
 
-/* MAIN CONTAINER */
+/* CONTAINER */
 .container {
-  width:80%;
+  max-width:1000px;
   margin:100px auto;
+  padding:20px;
 }
 
 /* TITLE */
 h2 {
   text-align:center;
-  font-size:32px;
+  font-size:34px;
   margin-bottom:40px;
 }
 
-/* PROJECT CARD */
+/* CARD */
 .card {
   background: rgba(255,255,255,0.05);
-  padding:25px;
-  border-radius:12px;
+  padding:30px;
+  border-radius:15px;
   margin-bottom:30px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   border:1px solid rgba(255,255,255,0.1);
-  box-shadow:0 0 20px rgba(0,0,0,0.5);
-  transition:0.3s;
+  box-shadow:0 20px 50px rgba(0,0,0,0.6);
+  transition:0.4s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow:0 0 30px rgba(0,0,0,0.8);
+  transform: translateY(-10px);
 }
 
 /* TEXT */
 h3 {
-  color:cyan;
+  color:#38bdf8;
   margin-bottom:10px;
 }
 
 p {
-  color:#ddd;
+  color:#ccc;
   line-height:1.7;
+  margin-bottom:10px;
 }
 
+/* TAGS */
+.tags {
+  margin-top:10px;
+}
+
+.tag {
+  display:inline-block;
+  background:rgba(56,189,248,0.15);
+  color:#38bdf8;
+  padding:6px 12px;
+  border-radius:20px;
+  margin:5px;
+  font-size:13px;
+}
+
+/* HIGHLIGHT */
+.highlight {
+  margin-top:10px;
+  background: rgba(56,189,248,0.1);
+  padding:10px;
+  border-left:4px solid #38bdf8;
+  border-radius:6px;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+  font-size:14px;
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -102,24 +137,56 @@ p {
 <a href="contact.html">Contact</a>
 </div>
 
+<!-- CONTENT -->
 <div class="container">
 <h2>Projects</h2>
 
+<!-- PROJECT 1 -->
 <div class="card">
 <h3>AI-Based Assistance System for Visually Impaired</h3>
+
 <p>
-Developed an AI-powered system to assist visually impaired individuals in navigating their surroundings safely. The system uses real-time camera input and deep learning to detect obstacles and understand the environment, then provides instant audio feedback to guide the user. Built using Python, OpenCV, and YOLO, the model was trained on a custom dataset (Roboflow) to improve detection accuracy. The solution offers a hands-free, user-friendly approach to enhance independence and safety in both indoor and outdoor environments.
+Developed an AI-powered system to assist visually impaired individuals in navigating their surroundings safely using real-time object detection and audio feedback.
 </p>
+
+<div class="tags">
+<span class="tag">Python</span>
+<span class="tag">OpenCV</span>
+<span class="tag">YOLO</span>
+<span class="tag">Computer Vision</span>
 </div>
 
+<div class="highlight">
+Improved real-time obstacle detection and provided hands-free navigation support, enhancing user safety and independence.
+</div>
+</div>
+
+<!-- PROJECT 2 -->
 <div class="card">
 <h3>Synapse Protocol – Adaptive AI Combat System</h3>
+
 <p>
-Developed an adaptive AI combat system that replaces traditional scripted game AI with intelligent agents capable of learning from player behavior. The system uses Multi-Agent Reinforcement Learning (MAPPO) to enable real-time adaptation, allowing enemies to adjust their strategies based on how the player plays. GOAP (Goal-Oriented Action Planning) is used for high-level strategies like flanking and ambush, while Graph Neural Networks (GNN) enable coordination between multiple AI agents for team-based actions. A player behavior analysis module further enhances adaptability. This project demonstrates the ability to design and integrate learning, planning, and multi-agent communication into a unified AI system, resulting in more realistic, dynamic, and engaging gameplay.
+Developed an adaptive AI system for gaming that learns from player behavior using reinforcement learning and dynamic strategy planning.
 </p>
+
+<div class="tags">
+<span class="tag">Reinforcement Learning</span>
+<span class="tag">MAPPO</span>
+<span class="tag">GNN</span>
+<span class="tag">GOAP</span>
+</div>
+
+<div class="highlight">
+Enabled real-time adaptive enemy behavior, creating more realistic and engaging gameplay experiences.
+</div>
 </div>
 
 </div>
+
+<!-- FOOTER -->
+<footer>
+© 2026 Ajuvad | All Rights Reserved
+</footer>
 
 </body>
 </html>
